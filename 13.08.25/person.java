@@ -9,4 +9,10 @@ public class person {
         this.lastname=lastname;
         this.age=age;
     }
+    public String getfirstname(){
+        return firstname;
+    }
+    public person setfirstname(string firstname){
+        this.firstname=firstname;
+    }
 }
