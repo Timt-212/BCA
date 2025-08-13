@@ -1,56 +1,35 @@
-class Student {
+import java.util.Scanner;
+
+ class mark {
     String name;
-    int age;
-    int[] marks = new int[3]; // marks for 3 subjects
+    int mark1, mark2, mark3;
 
-    // Constructor to initialize name, age, and marks
-    Student(String name, int age, int[] marks) {
-        this.name = name;
-        this.age = age;
-        if (marks.length == 3) {
-            this.marks = marks;
-        } else {
-            System.out.println("Please enter exactly 3 marks.");
-        }
-    }
-
-    // Method to calculate total marks
-    int getTotalMarks() {
-        int total = 0;
-        for (int mark : marks) {
-            total += mark;
-        }
-        return total;
-    }
-
-    // Method to calculate average marks
-    double getAverageMarks() {
-        return getTotalMarks() / 3.0;
-    }
-
-    // Method to print student details and marks
-    void printDetails() {
-        System.out.println("Student Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Marks: ");
-        for (int i = 0; i < marks.length; i++) {
-            System.out.println(" Subject " + (i + 1) + ": " + marks[i]);
-        }
-        System.out.println("Total Marks: " + getTotalMarks());
-        System.out.println("Average Marks: " + getAverageMarks());
-        System.out.println("-----------------------------------");
+    void calculateTotal() {
+        int total = mark1 + mark2 + mark3;
+        System.out.println("\nStudent Name: " + name);
+        System.out.println("Total Marks: " + total);
     }
 }
 
-public class Main {
+public class Student {
+
     public static void main(String[] args) {
-        int[] marks1 = {85, 90, 78};
-        int[] marks2 = {70, 88, 92};
+        Scanner sc = new Scanner(System.in);
 
-        Student s1 = new Student("Rahul", 20, marks1);
-        Student s2 = new Student("Priya", 21, marks2);
+        mark s = new mark();
 
-        s1.printDetails();
-        s2.printDetails();
+        System.out.print("Enter student name: ");
+        s.name = sc.nextLine();
+
+        System.out.print("Enter mark 1: ");
+        s.mark1 = sc.nextInt();
+
+        System.out.print("Enter mark 2: ");
+        s.mark2 = sc.nextInt();
+
+        System.out.print("Enter mark 3: ");
+        s.mark3 = sc.nextInt();
+
+        s.calculateTotal();
     }
 }
