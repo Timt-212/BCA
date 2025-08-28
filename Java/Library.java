@@ -3,7 +3,18 @@ import java.util.*;
 public class Library {
     public static void main(String[] args) {
         book b1 = new book();
+        System.out.println("Book Details:");
+        System.out.println("Serial Number: " + b1.SIno);
+        System.out.println("Quantity: " + b1.BookQuantity);
+        System.out.println("Author Name: " + b1.AuthorName);
+        System.out.println("Book Name: " + b1.BookName);
 
+        book b2 = new book();
+        System.out.println("Book Details:");
+        System.out.println("Serial Number: " + b2.SIno);
+        System.out.println("Quantity: " + b2.BookQuantity);
+        System.out.println("Author Name: " + b2.AuthorName);
+        System.out.println("Book Name: " + b2.BookName);
     }
 }
 
