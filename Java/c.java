@@ -7,8 +7,8 @@ class c implements a, b{
             System.out.println("Class B");
         }
     public static void main(String[] args) {
-        a a1 = new a();
-        b b1 = new b();
+        a a1 = new c();
+        b b1 = new c();
 
         a1.show();
         b1.display();
