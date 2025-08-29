@@ -2,19 +2,22 @@ import java.util.*;
 
 public class Library {
     public static void main(String[] args) {
+        book[] arr = new book[50];
         book b1 = new book();
-        System.out.println("Book Details:");
-        System.out.println("Serial Number: " + b1.SIno);
-        System.out.println("Quantity: " + b1.BookQuantity);
-        System.out.println("Author Name: " + b1.AuthorName);
-        System.out.println("Book Name: " + b1.BookName);
-
         book b2 = new book();
-        System.out.println("Book Details:");
-        System.out.println("Serial Number: " + b2.SIno);
-        System.out.println("Quantity: " + b2.BookQuantity);
-        System.out.println("Author Name: " + b2.AuthorName);
-        System.out.println("Book Name: " + b2.BookName);
+
+        arr[0] = b1;
+        arr[1] = b2;
+
+        for(int i=0; i<2; i++) {
+            System.out.println("Details of Book " + (i+1) + ":");
+            System.out.println("Serial Number: " + arr[i].SIno);
+            System.out.println("Quantity: " + arr[i].BookQuantity);
+            System.out.println("Author Name: " + arr[i].AuthorName);
+            System.out.println("Book Name: " + arr[i].BookName);
+            System.out.println();
+        }
+       
     }
 }
 
@@ -35,5 +38,6 @@ class book {
         AuthorName = input.nextLine();
         System.out.println("Enter the Book Name:");
         BookName = input.nextLine();
+        System.out.println();
     }
 }
