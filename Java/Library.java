@@ -38,6 +38,6 @@ class book {
         AuthorName = input.nextLine();
         System.out.println("Enter the Book Name:");
         BookName = input.nextLine();
-        System.out.println();
+        System.out.println();   
     }
 }
