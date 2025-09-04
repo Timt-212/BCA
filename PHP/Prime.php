@@ -13,14 +13,20 @@
     <?php
         if($_POST){
             $a = $_POST['num'];
-            $f = 1;
-            for($i=1; $i<=$a; $i++){
-                $f = $f*$i;
+            $p = 0;
+            for($i=2; $i<$a; $i++){
+                if($a%$i==0){
+                   $p = 1;
+                   break;
+                }
             }
-            echo "Factorial of $a is $f ";
-
+            if($p==0){
+                echo "$a is Prime";
+            }
+            else{
+                echo "$a is not Prime";
+            }
         }
-    
     
     
     ?>

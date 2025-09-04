@@ -13,17 +13,16 @@
     <?php
         if($_POST){
             $a = $_POST['num'];
-            $f = 1;
-            for($i=1; $i<=$a; $i++){
-                $f = $f*$i;
+            if($a%2==0){
+                echo "$a is an Even number";
             }
-            echo "Factorial of $a is $f ";
-
+            else{
+                echo "$a is an Odd Number";
+            }
         }
     
     
     
     ?>
-    
 </body>
 </html>
