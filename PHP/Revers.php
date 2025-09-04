@@ -13,15 +13,14 @@
     <?php
         if($_POST){
             $a = $_POST['num'];
-            $f = 1;
-            for($i=1; $i<=$a; $i++){
-                $f = $f*$i;
+            $c = 0;
+            while($a!=0){
+                $b = $a%10;
+                $c = ($c*10) + $b;
+                $a = (int)($a/10);           
             }
-            echo "Factorial of $a is $f ";
-
+            echo "Reverse Number is $c";
         }
-    
-    
     
     ?>
     
